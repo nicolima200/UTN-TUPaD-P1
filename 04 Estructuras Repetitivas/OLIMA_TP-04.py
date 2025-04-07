@@ -1,14 +1,24 @@
 ### ATENCIÓN!!!
-### Al final del documento 
-### se encuentran las llamadas
-### a las funciones
+### Descomentar las actividades que se quieren ejecutar 
 
+def llamadaActividades():
+    # actividad1()
+    # actividad2()
+    # actividad3()
+    # actividad4()
+    # actividad5()
+    # actividad6()
+    # actividad7()
+    # actividad8()
+    # actividad9()
+    # actividad10()
+    pass
 
 # # # 1) Crea un programa que imprima en pantalla todos los números enteros desde 0 hasta 100
 # # # (incluyendo ambos extremos), en orden creciente, mostrando un número por línea.
 
 def actividad1():
-    print("EJERCICIO 1\n")
+    print("\nEJERCICIO 1\n")
 
     for i in range(1,101):
         print(i)
@@ -17,7 +27,7 @@ def actividad1():
 # # # dígitos que contiene.
 
 def actividad2():
-    print("EJERCICIO 2\n")
+    print("\nEJERCICIO 2\n")
 
     # Solicitamos al usuario que ingrese un número entero.
     num=input("Ingrese un número entero: ")
@@ -43,7 +53,7 @@ def actividad2():
 # # # dados por el usuario, excluyendo esos dos valores.
 
 def actividad3():
-    print("EJERCICIO 3\n")
+    print("\nEJERCICIO 3\n")
 
     try:
         menor=int(input("Ingrese un número: "))
@@ -59,7 +69,7 @@ def actividad3():
         for i in range (menor+1, mayor): # Recorremos los números enteros comprendidos entre los dos ingresados.
             suma+=i # Acumulamos la suma.
 
-        print("Suma de los números comprendidos entre {menor} y {mayor}= ", suma)
+        print(f"Suma de los números comprendidos entre {menor} y {mayor}= ", suma)
     except ValueError:
         print("No es un número entero.")
 
@@ -71,8 +81,8 @@ def actividad3():
 
 def actividad4():
         
-    print("EJERCICIO 4\n")
-
+    print("\nEJERCICIO 4\n")
+    print("INGRESE 0 PARA TERMINAR Y MOSTRAR EL RESULTADO\n")
     suma=0
 
     try:
@@ -95,7 +105,7 @@ def actividad5():
 
     import random # Importamos la librería random para facilitar la generaciónd de números aleatorios
 
-    print("EJERCICIO 5\n")
+    print("\nEJERCICIO 5\n")
 
     nAleatorio=random.randint(0,9) # Generamos un número aleatorio entero entre 0 y 9 y lo almacenamos.
     contador=0 # Contará la cantidad de intentos para adivinar.
@@ -119,8 +129,9 @@ def actividad5():
 # # # entre 0 y 100, en orden decreciente.
 
 def actividad6():
-    print("EJERCICIO 6\n")
+    print("\nEJERCICIO 6\n")
 
+    input("Presione ENTER para continuar...") # Una pausa para que no se nos vaya de la pantalla el ejercicio anterior.
     for i in range(100,0,-2): # Recorremos los números de 100 a 0 con paso -2 y los mostramos
         print(i)
 
@@ -130,7 +141,7 @@ def actividad6():
 # # # número entero positivo indicado por el usuario.
 
 def actividad7():
-    print("EJERCICIO 7\n")
+    print("\nEJERCICIO 7\n")
     suma=0
 
     try:
@@ -152,7 +163,7 @@ def actividad7():
 # # # menor, pero debe estar preparado para procesar 100 números con un solo cambio).
 
 def actividad8():
-    print("EJERCICIO 8\n")
+    print("\nEJERCICIO 8\n")
 
     pares=0
     impares=0
@@ -186,7 +197,7 @@ def actividad8():
 # # # poder procesar 100 números cambiando solo un valor).
 
 def actividad9():
-    print("EJERCICIO 9\n")
+    print("\nEJERCICIO 9\n")
 
     cantNumeros=100 # Modificar esta variable para ingresar una cantidad distinta de números.
     suma=0 # Acumulamos los valores en esta variable, para al final dividirla por la cantidad de numeros ingresados.
@@ -206,7 +217,7 @@ def actividad9():
 # # # usuario. Ejemplo: si el usuario ingresa 547, el programa debe mostrar 745.
 
 def actividad10():
-    print("EJERCICIO 10\n")
+    print("\nEJERCICIO 10\n")
 
     try:
         num=input("Ingrese un número: ")
@@ -217,14 +228,4 @@ def actividad10():
     except (ValueError, TypeError):
         print("Se esperaba un número.")
 
-
-actividad1()
-actividad2()
-actividad3()
-actividad4()
-actividad5()
-actividad6()
-actividad7()
-actividad8()
-actividad9()
-actividad10()
+llamadaActividades()
