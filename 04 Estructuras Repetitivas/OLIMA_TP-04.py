@@ -93,16 +93,16 @@ def actividad4():
 
 def actividad5():
 
-    import random # Importamos 
+    import random # Importamos la librería random para facilitar la generaciónd de números aleatorios
 
     print("EJERCICIO 5\n")
 
-    nAleatorio=random.randint(0,9)
-    contador=0
-    num=10
+    nAleatorio=random.randint(0,9) # Generamos un número aleatorio entero entre 0 y 9 y lo almacenamos.
+    contador=0 # Contará la cantidad de intentos para adivinar.
+    num=10 # Le asignamos el valor 10 a num para asegurarnos de que el bucle while se ejecute al menos una vez.
 
     try:
-        while num != nAleatorio:
+        while num != nAleatorio: # Ya que nAleatorio tendrá un valor entre 0 y 9, y num es 10, el bucle se ejecuta al menos una vez.
             num=int(input("Adivine el número: "))
             contador+=1
 
@@ -111,7 +111,7 @@ def actividad5():
         print("Intentos ",contador)
 
     except ValueError:
-        print("El valor no es un número entero. Adiós.")
+        print("El valor no es un número entero. Adiós.") # Si el número ingresado no es un entero, el programa termina.
 
 
 
@@ -121,7 +121,7 @@ def actividad5():
 def actividad6():
     print("EJERCICIO 6\n")
 
-    for i in range(100,0,-2):
+    for i in range(100,0,-2): # Recorremos los números de 100 a 0 con paso -2 y los mostramos
         print(i)
 
 
@@ -134,8 +134,8 @@ def actividad7():
     suma=0
 
     try:
-        num=int(input("Ingrese un número: "))
-        if num > 0:
+        num=int(input("Ingrese un número: ")) # Si el número no es entero, salta la excepción y termina el programa.
+        if num > 0: # Verificamos que el número sea positivo
             for i in range(0,num):
                 suma+=i
             print("Suma: ", suma)
@@ -158,12 +158,12 @@ def actividad8():
     impares=0
     positivos=0
     negativos=0
-    cantNumeros=100
+    cantNumeros=100 # Cambiar el valor de esta variable para ingresar una cantidad distinta.
 
     try:
         for i in range(0,cantNumeros):
-            num=int(input("Ingrese un número entero: "))
-            if num % 2 ==0: # Calculamos módulo de num entre 2 para saber si es par
+            num=int(input("Ingrese un número entero: ")) # Si el número ingresado no es un entero, salta la excepción y finaliza el programa.
+            if num % 2 ==0: # Calculamos módulo de num entre 2 para saber si es par, debe dar cero.
                 pares+=1
             else:
                 impares+=1
@@ -188,8 +188,8 @@ def actividad8():
 def actividad9():
     print("EJERCICIO 9\n")
 
-    cantNumeros=100
-    suma=0
+    cantNumeros=100 # Modificar esta variable para ingresar una cantidad distinta de números.
+    suma=0 # Acumulamos los valores en esta variable, para al final dividirla por la cantidad de numeros ingresados.
 
     try:
         for i in range(0,cantNumeros):
@@ -211,11 +211,10 @@ def actividad10():
     try:
         num=input("Ingrese un número: ")
 
-        if float(num):
-            print("válido")
-            for i in range(len(num)-1, -1, -1):
+        if float(num): # Verificamos si la cadena contiene un valor convertible a float (true). Si no es posible (false), salta la excepción.
+            for i in range(len(num)-1, -1, -1): # Recorremos la cadena de atrás ( len(num)-1 ) hacia adelante (valor final -1, ya que debemos incluir el cero).
                 print(num[i], end="")
-    except ValueError:
+    except (ValueError, TypeError):
         print("Se esperaba un número.")
 
 
