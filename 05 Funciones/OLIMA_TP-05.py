@@ -23,13 +23,13 @@ def informacion_personal(nombre, apellido,edad, residencia):
 # # # 4. Crear dos funciones: calcular_area_circulo(radio) que reciba el radio como parámetro y devuelva el área del círculo. calcular_perimetro_circulo(radio) que reciba el radio como parámetro y devuelva el perímetro del círculo. Solicitar el radio al usuario y llamar ambas funciones para mostrar los resultados.
 
 def calcular_area_circulo(radio):
-    pi=3.1416
-    area= pi * radio ** 2
+    pi=3.1416 #Guardamos el valor del número pi en una variable y utilizamos 4 decimales.
+    area= pi * radio ** 2 #Fórmula para calcular el área de un círculo
     print(f"El área es: {area}")
 
 def calcular_perimetro_circulo(radio):
     pi=3.1416
-    perimetro = 2 * pi * radio
+    perimetro = 2 * pi * radio #Fórmula para calcular perímetro
     print(f"El perímetro es: {perimetro}")
 
 # # # 5. Crear una función llamada segundos_a_horas(segundos) que reciba
@@ -37,7 +37,7 @@ def calcular_perimetro_circulo(radio):
 # # # de horas correspondientes. Solicitar al usuario los segundos y mostrar el resultado usando esta función.
 
 def segundos_a_horas(segundos):
-    print(f"Equivale a {segundos /3600:.2f} horas")
+    print(f"Equivale a {segundos /3600:.2f} horas") #Dividimos los segundos por 3600, que es la cantidad de segundos que contiene 1 hora.
     
 # # # 6. Crear una función llamada tabla_multiplicar(numero) que reciba un
 # # # número como parámetro y imprima la tabla de multiplicar de ese
@@ -67,7 +67,7 @@ def operaciones_basicas(a, b):
 # # # masa corporal (IMC). Solicitar al usuario los datos y llamar a la función para mostrar el resultado con dos decimales.
 
 def calcular_imc(peso, altura):
-    imc=peso/(altura**2)
+    imc=peso/(altura**2) #Fórmula de cálculo del Indice de Masa Corporal
     print(f"Su índice de masa corporal es: {imc:.2f}")
 
 # # # 9. Crear una función llamada celsius_a_fahrenheit(celsius) que reciba
@@ -76,7 +76,7 @@ def calcular_imc(peso, altura):
 # # # resultado usando la función.
 
 def celsius_a_fahrenheit(celsius):
-    f=(celsius * 9/5) + 32
+    f=(celsius * 9/5) + 32 #Fórmula de conversión de celsuis a fahrenheit.
     print(f"{celsius}°C equivalen a {f}°F")
 
 # # # 10.Crear una función llamada calcular_promedio(a, b, c) que reciba
@@ -110,15 +110,18 @@ radio=float(input("Ingrese un radio: "))
 
 calcular_area_circulo(radio)
 calcular_perimetro_circulo(radio)
+print("")
 
 #5)
 segundos=int(input("Ingrese los segundos: "))
 
 segundos_a_horas(segundos)
+print("")
 
 #6)
 numero=int(input("Ingrese un número: "))
 tabla_multiplicar(numero)
+print("")
 
 #7)
 
@@ -126,17 +129,20 @@ numA=float(input("Ingrese un número: "))
 numB=float(input("Ingrese otro número: "))
 
 operaciones_basicas(numA,numB)
+print("")
 
 #8)
 peso = float(input("Ingrese su peso en kilogramos: "))
 altura = float(input("Ingrese su altura en metros: "))
 
 calcular_imc(peso,altura)
+print("")
 
 #9)
 celsius=float(input("Ingrese la temperatura en grados celsius: "))
 
 celsius_a_fahrenheit(celsius)
+print("")
 
 #10)
 a=float(input("Ingrese el primer número: "))
