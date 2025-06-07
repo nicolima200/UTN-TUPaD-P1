@@ -207,15 +207,19 @@
 #     "Bolivia": "La Paz"
 # }
 
-# paises=list(paises_capitales.keys())
-# capitales=list(paises_capitales.values())
-# invertidos={}
+# paises=list(paises_capitales.keys()) #Guardamos las claves en una lista.
+# capitales=list(paises_capitales.values()) #Guardamos los valores en otra lista.
+# invertidos={} #Creamos un diccionario vacío
 
-# for i in range(len(paises)):
-#     invertidos[capitales[i]]=paises[i]
+# for i in range(len(paises)): #Recorremos la lista de países
+#     invertidos[capitales[i]]=paises[i] # A cada clave capital en la posicion i le asignamos el valor país de la misma posicion.,
     
 # print("Recorriendo con for:\n",invertidos,"\n")
 
 # #Otra forma más rápida y simple es con la función zip:
+# #Zip combina en tuplas los elementos de dos o más secuencias (listas,tuplas)
+# #emparejándolos según su posición
+# #Luego con dict() convertimos esas tuplas en pares clave:valor.
+
 # invertidos2=dict(zip(paises_capitales.values(),paises_capitales.keys()))
 # print("Con función zip()\n",invertidos2)
